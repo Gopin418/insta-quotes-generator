@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+
+  quotes_grabber:
+    build: ./quotes_grabber
+    container_name: quotes_grabber
+    restart: always
+    environment:
+      - APP_NAME=QuotesGrabber
+    volumes:
+      - './quotes_grabber:/quotes_grabber'
+    expose:
+      - 8080
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    restart: always
+    volumes:
+      - './frontend:/frontend'
+    ports:
+      - '8000:8000'
+      - '5000:5000'
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
