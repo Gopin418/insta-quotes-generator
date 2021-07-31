@@ -12,6 +12,8 @@ services:
       - './quotes_grabber:/app'
     expose:
       - 8080
+    ports:
+      - "8080:8080"
 
   frontend:
     build: ./frontend
@@ -22,10 +24,3 @@ services:
     ports:
       - '8000:8000'
       - '5000:5000'
-
-  nginx:
-    build: ./nginx
-    container_name: nginx
-    restart: always
-    ports:
-      - "80:80"
