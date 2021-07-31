@@ -1,4 +1,4 @@
-# insta-quotes-generator
+# insta-quotes-generator (Heroku Compatibility)
 Instagram Quotes Image Generator
 
 Microservice system with Dockerize Vue & Flask
