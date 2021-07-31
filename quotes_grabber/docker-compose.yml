@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  quotes_grabber:
+    build: .
+    container_name: quotes_grabber
+    restart: always
+    environment:
+      - APP_NAME=QuotesGrabber
+    volumes:
+      - '.:/app'
+    ports:
+      - "8080:8080"
