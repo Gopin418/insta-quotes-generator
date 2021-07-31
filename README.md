@@ -15,3 +15,12 @@ Requirements :
 Installation Guide:
 1. Install all requirements
 2. Run `make build-and-run` command
+
+Available Make Command List:
+```
+build-and-run
+start
+stop
+logs container="container_name"
+restart-backend
+```
